@@ -20,8 +20,9 @@
                 <div class="card border-0 shadow">
                   <img src="{{ .image | relURL }}" alt="{{ .name | markdownify }}" class="card-img-top">
                   <div class="card-body">
-                    <h4 class="h5 mb-4"><a class="text-dark" href="{{ .link | safeURL }}">{{ .name | markdownify }}</a></h4>
-                    <a href="{{ .link | safeURL }}" class="btn btn-primary">Visit Site</a>
+                    <h4 class="h5"><a class="text-dark" href="{{ .link | safeURL }}">{{ .name | markdownify }}</a></h4>
+                    <p class="mb-4">{{.description}}</p>
+                    <a href="{{ .link | safeURL }}" class="btn btn-primary">Download</a>
                   </div>
                 </div>
               </div>

@@ -1,0 +1,5 @@
+{{ if .IsTranslated }}
+    {{ range .Translations }}
+        {{.Site.Params.Terms.ReadIn}}: <a href="{{ .Permalink }}">{{ .Title }}{{ if .IsPage }} {{ end }}</a>
+    {{ end }}
+{{ end }}

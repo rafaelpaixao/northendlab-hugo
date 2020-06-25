@@ -5,10 +5,17 @@
       <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
         <a href="{{ .Site.BaseURL }}" class="d-block pb-3"><img src="{{ .Site.Params.logo | relURL }}" class="img-fluid" alt="{{ .Site.Title }}"></a>
       </div>
-      <div class="col-lg-4 text-center mb-4 mb-lg-0">
+      <!--div class="col-lg-4 text-center mb-4 mb-lg-0">
         <ul class="list-inline mb-0">
           {{ range .Site.Menus.footer }}
           <li class="list-inline-item"><a class="text-dark d-block p-2" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div-->
+      <div class="col-lg-4 text-center mb-4 mb-lg-0">
+        <ul class="list-inline mb-0">
+          {{ range $.Site.Home.AllTranslations }}
+          <li class="list-inline-item"><a class="text-dark d-block p-2" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
           {{ end }}
         </ul>
       </div>
